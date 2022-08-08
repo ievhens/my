@@ -152,17 +152,19 @@ for(let i = 1; i < 4; i++){
 }
 
 function add(name, a, b){
-    let aside = document.createElement("aside");
-    aside.innerHTML = new Block(name, a, b);
-    aside.classList.add(name);    
-    document.getElementById("result").appendChild(aside);
-    assign(name);   
+    blocks[name] = new Block(name, a, b);
+    load()
 }
 
 document.onload = load();
 function load() {
+    document.getElementById("result").innerHTML = "";
     for(let i in blocks){
-        add(blocks[i].name, blocks[i].a, blocks[i].b);
+        let aside = document.createElement("aside");
+        aside.innerHTML = blocks[i]
+        aside.classList.add(blocks[i].name);
+        document.getElementById("result").appendChild(aside);
+        assign(blocks[i].name);
     }
 } 
 
