@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 2em;
+}
+main {
+    display:flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 2em auto;
+    padding: 2em;
+}
+ol {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+    counter-reset: cite-counter;
+    list-style-type: none;
+    padding: 0;
+}
+ol li:before {
+    content: "Task " counter(cite-counter);
+    counter-increment: cite-counter;
+    font-size: 2em;
+    font-weight: 700;
+}
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(182, 172, 172);
+    box-shadow: 2px 2px 10px 2px grey;
+    width: 10em;
+    height: 10em;
+    margin: 1em;
+}
+li:hover{
+    box-shadow: 2px 2px 10px 4px grey;
+}
+a{
+    text-decoration: none;
+    color: darkgray;
+}
+header{
+    text-align: center;
+    width: 60%;
+    margin-top: 5em;
+}
+h2:last-of-type{
+    text-decoration: underline;
+}

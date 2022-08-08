@@ -1,0 +1,84 @@
+.wraper{
+    display: table;
+    width: 420px;
+    padding: 50px 50px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(220, 0, 0, 1);
+}
+form{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .9);
+}
+form *{
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+form input, form button{
+    width: 350px;
+    height: 50px;
+    border: none;
+}
+label{
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+input::placeholder{
+    color: lightgray;
+}
+#loginbtn{
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+    color: white;
+    font-weight: 700;
+}
+#forgotpswbtn{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(220, 0, 0, 1);
+    font-size: 1em;
+    font-weight: 700;
+}
+h3{
+    text-align: center;
+    color: white;
+    font-weight: 100;
+}
+.social-login{
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-weight: 100;
+    font-size: 1.1em;
+}
+.social-login:nth-child(odd){
+    float: left;
+}
+.social-login:nth-child(even){
+    float: right;
+}
+#facebookloginbtn{
+    background: url("../img/fb.jpg") 35px 10px no-repeat rgb(59, 87, 157);
+    background-size: 7%;
+    
+}
+#twitterloginbtn{
+    background: url("../img/tw.jpg") 40px 12px no-repeat rgb(22, 185, 237);
+    background-size: 10%;
+}
+button{
+    box-shadow: 0px 10px 14px -7px #505050;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    box-shadow: 0px 13px 14px -7px #505050;
+}
+button:active {
+    border: 1px solid rgb(220, 0, 0, 1);
+}
+
+

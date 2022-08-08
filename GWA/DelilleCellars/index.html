@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Lille Cellars</title>
+    <link rel="stylesheet" href="./css/delille.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="white-transparent">  
+        <div class="header-container centered">
+            <a href="#"><img class="logo" src="./img/logo_header_delille.png" alt="De Lille Cellars logo"></a>
+            <div class="burger">
+                <span></span>
+            </div>
+            <nav id="mobile-menu">
+                <ul class="authorize">
+                    <li><a href="#">login</a></li>
+                    <li>|</li>
+                    <li><a href="#">cart</a></li>
+                </ul>        
+                <ul class="menu">
+                    <li><a href="#">home</a></li>  
+                    <li><a href="#">winery</a></li>
+                    <li><a href="#">our wine</a></li>
+                    <li><a href="#">wine club</a></li>
+                    <li><a href="#">events</a></li>        
+                </ul>    
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="slider centered white-transparent">
+            <img class="slider-image current" src="./img/slide1.jpg" alt="De Lille Cellars">
+            <img class="slider-image" src="./img/slide2.jpg" alt="De Lille Cellars">
+        </section> 
+         <section class = "info centered white-transparent top-margined">
+            <div>
+                <img class="info-img" src="./img/info_visiting.jpg" alt="tasting wine">
+                <h3>visit us</h3>
+            </div>
+            <div>
+                <form action="">
+                    <fieldset>
+                        <legend>sign up!</legend>
+                        <label for="name">name</label>
+                        <input type="text" id="name" name="name" value="" placeholder="Great A'Tuin"><br>
+                        <label for="">email address</label><br>
+                        <input type="email" id="mail" name="mail" value="" placeholder="discworld@gmail.com" required>
+                    </fieldset>
+                </form>
+                <h3>mailing list</h3>
+            </div>
+            <div>
+                <img class="info-img" src="./img/info_shipping.jpg" alt="shipping wine">
+                <h3>shipping</h3>
+            </div>
+        </section>
+        <section class="order centered">
+            <article class="order-container white-transparent top-margined">
+                <div class="order-item">
+                    <h3>Order Your D2 2010 Release Today!</h3>
+                    <img class="bottle" src="./img/bottle_2010d2Columbia.jpg" alt="D2 wine year 2010">
+                    <p>This 2012 Gold Medal winner of the Sunset International Wine 
+                        Compeition is a must have for your collection! Showing wonderful
+                        complex aromas of red and black berries, anise, nutmeg, cedar, 
+                        cocoa and wood smoked cinnamon characters.
+                    </p>
+                    <table>
+                        <tr>
+                            <td colspan="3">price</td>
+                        </tr>
+                        <tr>
+                            <td>bottle</td>
+                            <td>/</td>
+                            <td>case</td>
+                        </tr>
+                        <tr>
+                            <td>$40</td>
+                            <td>/</td>
+                            <td>$480</td>
+                        </tr>
+                    </table>
+                    <form action="">
+                        <label for="quantity1">qty</label>
+                        <div class="quantity less">–</div>
+                        <input type="number" id="quantity1" name="quantity" value="1" min="1" max="100"><br>
+                        <div class="quantity more">+</div>
+                        <button type="submit" value="Submit">buy now</button>
+                    </form>
+                    <a href=""><img class="btn" src="./img/button_buy.png" alt="buy de lille wine"></a>
+                </div>
+            </article>
+            <article class="order-container white-transparent top-margined">
+                <div class="order-item">
+                    <h3>Meet The 2012 Chaleur Estate Blanc!</h3>
+                <img class="bottle" src="./img/bottle_2012chaleurEstateWhite.jpg" alt="Chaleur Estate Blanc wine year 2012">
+                <p>A honeyed richness is expressed in the mouth unfolding to reveal
+                    sweet grass and herbs, sweet cream and once again, guava and
+                    citrus.  The powerful richness, juicy acidity and fine balance of this
+                    wine really sets it apart in style and quality.</p>
+                <table>
+                    <tr>
+                        <td colspan="3">price</td>
+                    </tr>
+                    <tr>
+                        <td>bottle</td>
+                        <td>/</td>
+                        <td>case</td>
+                    </tr>
+                    <tr>
+                        <td>$40</td>
+                        <td>/</td>
+                        <td>$480</td>
+                    </tr>
+                </table>
+                <form action="">
+                    <label for="quantity2">qty</label>
+                    <div class="quantity less">–</div>
+                    <input type="number" id="quantity2" name="quantity" value="1" min="1" max="100"><br>
+                    <div class="quantity more">+</div>
+                    <button type="submit" value="Submit">buy now</button>
+                </form>
+                <a href=""><img class="btn" src="./img/button_buy.png" alt="buy de lille wine"></a>
+                </div>
+            </article>
+        </section>
+        <section class="partners centered white-transparent top-margined">
+            <h2>discover the collection</h2>
+            <div class="partner">
+                <a href="#"><img src="./img/logo_partners_delille.png" alt="delille logo"></a>
+            </div>
+            <div class="partner">
+                <a href="#"><img src="./img/logo_partners_grandciel.png" alt="grand ciel logo"></a>
+            </div>
+            <div class="partner">
+                <a href="#"><img src="./img/logo_partners_doyenne.png" alt="doyenne logo"></a>
+            </div>
+        </section>
+    </main>
+    <footer class="top-margined">
+        <div class="footer-container centered">
+            <nav class="about-us">
+                <h4>About Us</h4>
+                <hr>
+                <ul>
+                    <a href="#"><li>history</li></a>
+                    <a href="#"><li>team</li></a>
+                    <a href="#"><li>events</li></a>
+                    <a href="#"><li>more</li></a>
+                </ul>
+            </nav>
+            <nav class="contacts">
+                <h4>Get in Touch</h4>
+                <hr>
+                <div class="mail">
+                    <a href="mailto:info@delillecallrs.com?subject=From delillecellars.com">info@delillecallrs.com</a>
+                </div>
+                <div class="phone">
+                    <a href="tel:+380991233982">425-877-9472</a>
+                </div>
+            </nav>
+            <nav class="social-media">
+                <h4>Keep up with us Online</h4>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/logo_footer_facebook.png" alt="delillecellars facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/logo_footer_twitter.png" alt="delillecellars twitter"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/logo_footer_pinterest.png" alt="delillecellars pinterest"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+<script src="./js/jquery.imgpreload.min.js"></script> 
+<script src="./js/delille.js"></script>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <main>
+        <nav class="home"><a href="../lesson16.html">назад</a></nav>
+        <section class="task-description">
+            <div class="task-description-text">
+                <p>Создать html-страницу с формой для логина пользователя и галочкой «Запомнить меня». После заполнения формы вывести на экран: «Привет, Имя! Я тебя запомнил/не запомнил».</p>
+            </div>
+            <div class="task-description-image">
+                <img src="../img/task01.jpg" alt="form example">
+            </div>
+        </section>
+        <section class = buttons>
+            <!-- <button type="button"></button> -->
+        </section>
+        <section id="result">
+            <form action="">
+                <label for="login">Your login:</label><br>
+                <input type="text" id="login" name="username" value="Лето" required><br>
+                <label for="password"></label>Your password<br>
+                <input type="password" id="password" name="password"><br>
+                <label for="rememberme">Remember me</label>
+                <input type="checkbox" id="rememberme" name="remember" value="checked" checked><br>
+                <input type="button" value="Sign In" onclick="display()"><br>
+                <a href="#">Forgot password?</a>
+                <p id="hello"></p>
+            </form>            
+        </section>
+    </main>
+    <script>
+        function display(){
+            let name = document.getElementById("login").value;
+            let rememberme = document.getElementById("rememberme").checked;
+            let no = rememberme ? "" : "не ";
+
+            document.getElementById("hello").innerText = `Привет, ${name}! Я тебя ${no}запомнил.`;
+        }
+    </script>
+</body>
+</html>

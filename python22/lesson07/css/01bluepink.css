@@ -1,0 +1,254 @@
+/* start full reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end full reset*/
+.wraper{
+	width: 1000px;
+	margin: auto;
+	padding: 20px 150px;
+	background: url("../img/texture.jpg");
+	color: lightgray;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+header{
+	background-color: white;
+	color: darkblue;
+	border-radius: 5px;
+	padding: 10px 10px;
+	overflow: auto;
+}
+header a{
+	text-decoration: none;
+}
+.logo{
+	float: left;
+}
+.logo a span:nth-child(1),
+.logo a span:nth-child(2){
+	font-size: 2.5em;
+	font-weight: 700;
+}
+.logo a span:nth-child(3){
+	font-size: 2em;
+	font-weight: 700;
+}
+.logo a span:nth-child(1){
+	color: rgb(41 46 52);
+}
+.logo a span:nth-child(2){
+	color: rgb(169 99 153);
+}
+.logo a span:nth-child(3){
+	color: darkgray;
+}
+nav{
+	float: right;
+}
+header li{
+	display: inline-block;
+	font-size: 1.1em;
+	font-weight: 700;
+	color: darkblue;
+	text-transform: capitalize;
+	width: 100px;
+	margin-top: 10px
+}
+nav a:first-child li{
+	color: rgb(169 99 153);
+}
+main{
+	overflow: auto;
+	background: rgb(255, 255 ,255, 0.2);
+	margin: 20px 0;
+}
+aside{
+	width: 300px;
+	float: left;
+}
+.details, .left-block, table{
+	background-color: rgb(55 62 72);
+}
+summary{
+	padding: 12px;
+}
+summary::marker{
+	color: rgb(169 99 153);
+}
+details{
+	border-bottom: 1px solid darkgrey;
+}
+details p{
+	margin-left: 25px;
+
+}
+details:last-child{
+	border: none;
+	padding-bottom: 5px;
+
+}
+.left-block, .details{
+	box-shadow: 1px 1px darkgray;
+	border-radius: 5px;
+	margin: 10px;
+}
+.left-block{
+	padding: 10px;
+}
+.left-block > p:nth-of-type(1){
+	font-style: italic;
+	letter-spacing: 0.05em;
+	line-height: 1.7em;
+}
+.left-block > p:nth-of-type(2){
+	text-align: right;
+}
+section{
+	width: 690px;
+	float: right;
+	margin-bottom: 25px;
+}
+.images img{
+	display: block;
+	width: 200px;
+	height: 180px;
+	line-height: 180px;
+	text-align: center;
+	float: left;
+	margin-right: 10px;
+	font-size: 2em;
+	font-weight: 700;
+	text-transform: uppercase;
+	border: 10px solid rgb(105 118 137);
+	background-color: white;
+}
+.lists div{
+	width: 210px;
+	float: left;	
+	margin-right: 20px;
+	font-size: 0.85em;
+	line-height: 1.8em;
+}
+ul{
+	list-style-type: disc;
+	list-style-position: inside;
+}
+ol{
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+dt{
+	font-weight: 700;
+}
+dd{
+	font-style: italic;
+}
+table{
+	width: 99%;	
+	border-radius: 5px;
+	border-style: hidden;
+	box-shadow: 3px 3px 10px black;
+}
+table tr:first-child{
+	background-color: rgb(41 46 52);
+	font-weight: 700;
+	color: white;
+}
+table td{
+	padding: 10px;
+	margin: 1px;
+	border: 1px solid darkgray;
+}
+form *{
+	margin: 0
+}
+form > :nth-child(1),
+form > :nth-child(2),
+form > :nth-child(3),
+form > :nth-child(4),
+form > :nth-child(10),
+form > :nth-child(11){
+	display: block;
+}
+
+input[type="text"], select{
+	padding-left: 10px;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	width: 250px;
+	height: 30px;
+}
+
+form > :nth-child(5),
+form > :nth-child(8)
+{
+	margin: 10px 0;
+}
+label{
+	margin: 25px 0 5px 0;
+}
+button{
+	width: 125px;
+	height: 50px;
+	margin: 20px 0;
+	border-radius: 10px;
+	background-color: rgb(169 99 153);
+	color: white;
+}
+footer{
+	text-align: center;
+}
+h2{
+	font-size: 1.3em;
+	font-weight: 700;
+	margin: 10px 0;
+	color: white;
+}
+h3{
+	font-size: 1.1em;
+	font-weight: 700;
+	margin-bottom: 10px;
+	color: white;
+}
+p{
+	margin: 10px 0;
+}
+a{
+	color: rgb(169 99 153);
+}

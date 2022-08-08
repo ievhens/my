@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <main>
+        <nav class="home"><a href="../lesson13.html">назад</a></nav>
+        <section class="task-description">
+            <div class="task-description-text">
+                <p>Создать html-страницу с большой таблицей</p>
+                <p>При клике по заголовку колонки, необходимо отсортировать данные по этой колонке. Например: на скриншоте люди отсортированы по возрасту. Учтите, что числовые значения должны сортироваться как числа, а не как строки.</p>
+            </div>
+            <div class="task-description-image">
+                <img src="../img/task05.jpg" alt="">
+            </div>
+        </section>
+        <section class = buttons>
+            <!-- <button type="button" id="" onclick="">Создать</button> -->
+        </section>
+        <section id="result">
+            <table id="table">
+                <thead>
+                    <tr onclick="sort(event)">
+                        <td>Firstname</td>
+                        <td>Lastname</td>
+                        <td>Age</td>
+                        <td>Company</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mark</td>
+                        <td>Zuckerberg</td>
+                        <td>34</td>
+                        <td>Facebook</td>
+                    </tr>
+                    <tr>
+                        <td>Larry</td>
+                        <td>Page</td>
+                        <td>45</td>
+                        <td>Google</td>
+                    </tr>
+                    <tr>
+                        <td>Timothy</td>
+                        <td>Cook</td>
+                        <td>57</td>
+                        <td>Apple</td>
+                    </tr>
+                    <tr>
+                        <td>Bill</td>
+                        <td>Gates</td>
+                        <td>62</td>
+                        <td>Microsoft</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="../js/lesson.js">
+
+    </script>
+</body>
+</html>

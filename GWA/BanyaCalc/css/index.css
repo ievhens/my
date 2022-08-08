@@ -1,0 +1,141 @@
+/* start full reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* end full reset*/
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    padding: 2px;
+    color:darkolivegreen;
+    
+}
+main.container{
+    width: 300px;
+    margin: 0 auto;
+}
+h1{
+    font: 20px Caveat;
+    text-align: center;
+}
+form{
+    line-height: 29px;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid darkolivegreen;
+}
+fieldset .container{
+    display: flex;
+    justify-content:space-between;
+    padding: 15px 0
+}
+fieldset button{
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    color:darkolivegreen;
+    border: 1px solid darkolivegreen;
+    border-radius: 5px;
+}
+input[type="range"], input[type="radio"]{
+    accent-color: darkolivegreen;;
+}
+input[type="range"]{
+    width: 100%;
+    height: 5px;
+}
+input[type="number"]{
+    width: 30px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(255,255,255,0);
+    color: darkolivegreen;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+td{
+    width: 50%;
+    line-height: 20px;
+}
+#submit{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    color:darkolivegreen;
+    border: 1px solid darkolivegreen
+}
+#submit:hover{
+    box-shadow: 0 0 2px 0 grey;
+    background-color: rgb(220, 220, 220);
+}
+#submit:active{
+    border: 2px solid darkgrey;
+}
+.result{
+    display: flex;
+    justify-content: space-between;
+    margin: 18px auto;
+}
+.result span{
+    display: block;
+    float: right;
+    position: relative;
+    font-size: 22px;
+    animation: numbersmove .4s;
+}
+@keyframes numbersmove{
+    from {
+        right: 150px;
+        opacity: 0;
+      }
+      to {
+        right: 0px;
+        opacity: 1;
+      }
+}

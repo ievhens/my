@@ -1,0 +1,41 @@
+.wraper{
+    width: 700px;
+    padding: 50px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgb(232, 232, 232, 1);
+}
+.wraper > div{
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid lightgrey;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+table{
+    width: 602px;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+tr:first-child{
+    height: 100px;
+}
+td{
+    border: 1px solid lightgrey;
+    
+}
+iframe{
+    height: 260px;
+    width: 260px;
+    display: block;
+    margin: 0 auto;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}

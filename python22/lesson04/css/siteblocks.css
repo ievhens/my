@@ -1,0 +1,131 @@
+/* start full reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end full reset*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wraper{
+    width: 70%;
+    min-width: 1000px;
+    margin: 20px auto;
+    padding: 1em;
+    border: none;
+    background: rgb(246, 246, 246);
+    box-shadow: 2px 2px 30px 10px grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+header, nav, footer, section, div{
+    margin: 0.2em;
+}
+header{
+    background-color: rgb(146 49 88);
+    padding: 1em;
+    padding-left: 2em;
+}
+nav{
+    background-color: rgb(110 18 55);
+    padding: 0.5em;
+    padding-left: 2em;
+}
+main{  
+    background-color: rgb(182 91 128);
+    width: 56%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2em;
+    padding: 2em;
+}
+h1{
+    align-self: baseline;
+    margin-bottom: 1em;
+}
+aside{
+    background-color: rgb(182 91 128);
+}
+aside:nth-of-type(1){
+    width: 20%;
+    height: 12em;
+    float: left;
+    background-color: white;
+}
+aside div{
+    background-color: rgb(182 91 128);
+    padding-top: 2em;
+    padding-left: 2em;
+}
+aside div:nth-child(1){
+    height: 33%;
+    margin-top: 0;
+}
+aside div:nth-child(2){
+    height: 66%;
+}
+aside:nth-of-type(2){
+    width: 10%;
+    float: right;
+    height: 12em;
+    margin-right: 0.2em;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    background-color: rgb(219 146 175);
+    height: 6em;
+    width: 100%;
+    padding-top: 1em;
+    padding-left: 2em;
+    box-sizing: border-box;
+}
+footer{
+    background-color: rgb(110 18 55);
+    clear: both; 
+    padding: 1em;
+    padding-left: 2em;
+}

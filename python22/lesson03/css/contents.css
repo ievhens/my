@@ -1,0 +1,23 @@
+main{
+    width: 30%;
+    margin: 2em auto;
+    padding: 1em;
+    background: rgb(245, 245, 245);
+    box-shadow: 2px 2px 10px 2px grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+li{
+    color: rgb(72, 61, 139)
+}
+ol li::marker{
+    color:black;
+    font-weight: 700;
+}
+.first-level{
+    list-style: upper-roman;
+}
+.third-level{
+    list-style: lower-alpha;
+}

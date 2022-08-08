@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body onload="displayColors()">
+    <main>
+        <!-- <nav class="home"><a href="../lesson18.html">назад</a></nav> -->
+         <section class="task-description">
+            <div class="task-description-text">
+                <p>Реализовать страницу с палитрой цветов и формой для добавления нового цвета</p>
+                <p>Один цвет характеризуется:</p>
+                <ul>
+                    <li>уникальным названием;</li>
+                    <li>типом (RGB, RGBA или HEX);</li>
+                    <li>кодом цвета.</li>
+                </ul>
+                <p>При нажатии на кнопку Save необходимо проверять введенные данные по следующим правилам.</p>
+                <b>Название:</b>
+                <ul>
+                    <li>обязательное поле;</li>
+                    <li>нерегистрозависимое уникальное значение (то есть в списке уже существующих цветов не должно быть такого же названия);</li>
+                    <li>только буквенные символы.</li>
+                </ul>
+                <b>Тип:</b>
+                <ul>
+                    <li>выпадающий список из 3-х вариантов: RGB, RGBA, HEX.</li>
+                </ul>
+                <b>Код цвета:</b>
+                <ul>
+                    <li>RGB - 3 числа через запятую, каждое число в диапазоне от 0 до 255;</li>
+                    <li>RGBA - 4 числа через запятую, первые 3 числа в диапазоне от 0 до 255, последнее число  от 0 до 1</li>
+                    <li>HEX - символ # и 6 цифр или букв от от A до F.</li>
+                </ul>
+                <p>Если пользователь при заполненни формы ввел некорректные данные, то необходимо отобразить соответствующие ошибки.</p>
+                <p>Необходимо сохранять коллекцию цветов в куки, чтобы при обновлении страницы не потерять данные. Максимальный срок жизни куки - 3 часа.</p>
+            </div>
+            <div class="task-description-image">
+                <aside id="gallery">
+                    <button type="button" id="prev-btn" class="unactive" onclick="slideImg(-1)">&#8678;</button>
+                    <div id="images">
+                        <img src="../img/01.jpg" alt="start" class="current-img">
+                        <img src="../img/02.jpg" alt="filled fields">
+                        <img src="../img/03.jpg" alt="errormessages">
+                        <img src="../img/04.jpg" alt="end">
+                    </div>
+                    <button type="button" id="next-btn" onclick="slideImg(1)">&#8680;</button>
+                </aside>
+            </div>
+        </section> 
+
+        <section class = buttons>
+<!--             <button onclick="createColor()">create color</button>
+            <button onclick="getColorsfromCookie()">get from cookie</button>
+            <button onclick="deleteCookie()">delete cookie</button>
+            <button onclick="displayColors()">display colors</button> -->
+        </section>
+        <section id="result">
+            <h2>Create new color</h2>
+            <form action="" id="colorform">
+                <label for="colorname">Name</label>
+                <input type="text" name="name" id="colorname" maxlength="15" required> 
+                <p id="nameerror"></p>
+                <label for="colortype">Type</label>
+                <select name="type" id="colortype">
+                    <option value="rgb">RGB</option>
+                    <option value="rgba">RGBA</option>
+                    <option value="hex">HEX</option>
+                </select>
+                <p></p>
+                <label for="colorcode">Code</label>
+                <input type="text" name="code" id="colorcode">
+                <p id="codeerror"></p>
+                <input type="submit" value="Save">
+            </form>
+        </section>
+        <section id="colors">
+            <h1>All Colors</h1>
+            <div class="color-items">
+    <!--        
+                <div class="container">
+                  <div class="description">
+                    <p class="name">Green</p>
+                    <p class="type">rgb</p>
+                    <p class="code">0 180 0</p>
+                  </div>
+                </div>
+     -->
+            </div>
+          </section>
+    </main>
+    <script src="../js/lesson.js"></script>
+</body>
+</html>

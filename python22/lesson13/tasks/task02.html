@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <main>
+        <nav class="home"><a href="../lesson13.html">назад</a></nav>
+        <section class="task-description">
+            <div class="task-description-text">
+                <p>Создать html-страницу с деревом вложенных директорий.</p>
+                <p>При клике на элемент списка, он должен сворачиваться или разворачиваться. При наведении на элемент, шрифт должен становиться жирным (с помощью CSS).</p>
+            </div>
+            <div class="task-description-image">
+                <img src="../img/task02.jpg" alt="drop down lists">
+            </div>
+        </section>
+        <section class = buttons>
+            <!-- <button type="button" id="" onclick="">Создать</button> -->
+        </section>
+        <section id="result">
+            <ul onmouseenter="boldRolled(event)">
+                <li onclick="rollInOut(event)">This PC
+                    <ul>
+                        <li>Local Disk (C:)
+                            <ul>
+                                <li>Program Files</li>
+                                <li>Users</li>
+                                <li>Windows</li>
+                            </ul>
+                        </li>
+                        <li>Local Disk (D:)
+                            <ul>
+                                <li>New folder 1</li>
+                                <li>New folder 2</li>
+                                <li>New folder 3</li>
+                            </ul>
+                        </li>
+                        <li>Local Disk (E:)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="../js/lesson.js">
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <main>
+        <!-- <nav class="home"><a href="../lesson18.html">назад</a></nav> -->
+         <section class="task-description">
+            <div class="task-description-text">
+                <p><strong>Реализовать веб-страницу для поиска фильмов.</strong></p>
+                <p>При открытии страницы пользователю доступняа только форма для ввода названия фильма (или чатси названия) и выбора типа (<b>movie, series, episode</b>).</p>
+                <p>После того как пользователь ввел данные и нажал на кнопку <b>Search</b> необходимо отправить соответствующий запрос к API ресурса <b>OMDB</b> с помощью AJAX.</p>
+                <p>Если в качестве ответа на запрос вы получили список фильмов, то его необходимо оботразить под формой поиска. Если по заданным критериям не будут найдены фильмы, то отобразите сообщение<b> Movie not found!</b>.</p>
+                <p>Учтите, что <b>OMDB</b> по умолчанию возвращает только первые 10 фильмов. поэтому необходимо реализовать пагинацию для тех случаев, когда под критерии поиска подходит больше, чем 10 фильмов.</p>
+                <p>Таким образом, при первом поиске необходимо выводить первые 10 фильмов и кнопки для перехода по страницам. При клике на такую кнопку необходимо отправить запрос с указанием в параметрах требуемой страницы и полученный результат вывести на место текущего списка фильмов.</p>
+                <p>Возле каждого фильма должна быть кнопка <b>Details</b>, при нажатии на которую будет выводиться подробная информация о фильме.</p>
+                <p>Эту информацию необходимо выводить на этой же странице сразу под списком найденных фильмов и пагинацией.</p>
+                <p>Все запросы необходимо отправлять, используя AJAX. То есть при нажатии на любые кнопки ваша веб-страница не должна обновляться.</p>
+            </div>
+            <div class="task-description-image">
+                <img src="../img/01.jpg" alt="">
+            </div>
+        </section>  -->
+<!--         <section class = buttons>
+            <button onclick="display()">display</button>
+        </section> -->
+        <section id="form">
+            <h2>Search:</h2>
+            <form action="">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" value="man">
+                <label for="type">Type:</label>
+                <select id="type" name="type">
+                    <option value="movie">Movie</option>
+                    <option value="series">Series</option>
+                    <option value="episode">Episode</option>
+                </select>
+                <button type="button" id="search-btn">Search</button>
+            </form>
+        </section>
+        <section id="result">
+        </section>
+        <section id="pagination">
+        </section>
+        <section id="full">
+        </section>
+    </main>
+    <script src="../js/lesson.js"></script>
+</body>
+</html>

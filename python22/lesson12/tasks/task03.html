@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" onclick="moveBall()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <aside id="field">
+        <div class="left-goal-area"></div>
+        <div class="left-penalty-area"></div>
+        <div class="central-line"></div>
+        <div class="central-circle"></div>
+        <div class="right-penalty-area"></div>
+        <div class="right-goal-area"></div>
+    </aside>
+    <main>
+        <nav class="home"><a href="../lesson12.html">назад</a></nav>
+        <section class="task-description">
+            <div class="task-description-text">
+                <p>Создать html-страницу с футбольным полем, которое занимает всю ширину и высоту экрана, и мячом размером 100 на 100 пикселей.</p>
+                <p>Сделать так, чтобы при клике мышкой по полю, мяч плавно перемещался на место клика. Учтите, необходимо, чтобы центр мяча останавливался именно там, где был совершен клик мышкой. Также предусмотрите, чтобы мяч не выходил за границы поля.</p>
+            </div>
+        </section>
+        <section class = buttons>
+            <button type="button" id="runball" onclick="runBall()">Начать</button>
+        </section>
+        <section id="result" style="border: none">
+            <div id="ball"></div>
+        </section>
+    </main>
+    <script src="../js/lesson.js"></script>
+</body>
+</html>
+

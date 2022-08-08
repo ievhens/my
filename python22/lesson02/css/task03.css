@@ -1,0 +1,47 @@
+main{
+    width: 30%;
+    margin: 100px auto;
+    padding: 2em;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2em;
+    background-color: rgb(255, 240, 255);
+    border-radius: 2%;
+    box-shadow: 0.3em 0.3em 0.5em dimgray;
+}
+h4{
+    font-weight: 100;
+}
+dt{ 
+    font-style: italic;
+}
+.part-of-speech > dd{
+    display:list-item;
+    list-style-type: decimal; 
+}
+dd > ul{
+    list-style-type: none;
+}
+ul{
+    padding-left: 0;
+    margin: 0;
+}
+.example{
+    color: lightslategray;
+}
+
+.synonyms > ul > li{
+    display: inline;            
+}
+.synonyms a{
+    text-decoration: none;
+}
+.synonyms > ul::before{
+    content:"synonyms:";
+}
+.synonyms li::after{
+    content: ", ";
+}
+.synonyms li:last-child:after{
+    content: " "
+}

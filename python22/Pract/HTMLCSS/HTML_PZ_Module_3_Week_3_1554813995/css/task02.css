@@ -1,0 +1,32 @@
+
+.wraper{
+    width: 700px;
+    padding: 50px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: rgb(232, 232, 232, 1);
+}
+.contents{
+    width: fit-content;
+    padding: 0 20px;
+    line-height: 1.5;
+    background-color: rgba(211, 211, 211, 1);
+    border: 1px solid darkgrey;
+}
+.contents h3{
+    text-align: center;
+}
+.contents ol{
+    list-style-position: inside;
+}
+.contents > ol:first-of-type{
+    padding: 0;
+}
+.contents a{
+    color: darkblue;
+    text-decoration: none;
+}
+.contents a:hover{
+    text-decoration: underline;
+}

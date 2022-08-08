@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <main>
+        <div class="home"><a href="../lesson11.html">назад</a></div>
+        <section class="task-description">
+            <div class="task-description-text">
+                <p>Реализовать класс, описывающий html элемент.
+                    Класс HtmlElement должен содержать внутри себя:</p>
+                    <ul>
+                        <li>название тега;</li>
+                        <li>самозакрывающийся тег или нет;</li>
+                        <li>текстовое содержимое;</li>
+                        <li>массив атрибутов;</li>
+                        <li>массив стилей;</li>
+                        <li>массив вложенных таких же тегов;</li>
+                        <li>метод для установки атрибута;</li>
+                        <li>метод для установки стиля;</li>
+                        <li>метод для добавления вложенного элемента в конец текущего элемента;</li>
+                        <li>метод для добавления вложенного элемента в начало текущего элемента;</li>
+                        <li>метод getHtml(), который возвращает html код в виде
+                            строки, включая html код вложенных элементов.</li>
+                    </ul>
+                <p>С помощью написанного класса реализовать следующий блок
+                    и добавить его на страницу с помощью document.write().</p>
+                <p><b>Обратите внимание.</b> Чтобы получить весь этот html в виде
+                    строки должно быть достаточно вызвать метод getHtml только
+                    у тега с идентификатором wrapper.</p>
+            </div>
+                <img src="../img/Screenshot_12.jpg" alt="make this wraper as object">
+            </section>
+        <div class = buttons>
+            <button type="button" id="" onclick="wrapper.getHtml()">Вывести</button>
+        </div>
+        <div id="result"></div> 
+    </main>
+    <script src="../js/lesson.js"></script>
+</body>
+</html>

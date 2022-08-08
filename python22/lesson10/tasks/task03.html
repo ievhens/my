@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>  
+    <main>
+        <div id="result"></div>
+        <div class="task-description">
+            <p>Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом.</p>
+            <ol>
+                <li>Функция вывода времени на экран</li>
+                <li>Функция изменения времени на переданное количество секунд.</li>
+                <li>Функция изменения времени на переданное количество минут.</li>
+                <li>Функция изменения времени на переданное количество часов.</li>
+            </ol>
+            <p>Учтите, что в последних 3-х функциях, при изменении одной 
+                части времени, может измениться и другая. Например: если ко 
+                времени «20:30:45» добавить 30 секунд, то должно получиться 
+                «20:31:15», а не «20:30:75»</p>
+        </div>
+        <div class = buttons>
+            <button type="button" id="" onclick="setTime()">установить</button>
+            <button type="button" id="" onclick="userTime.addSeconds(+prompt('Add seconds: '))">+ секунды</button>
+            <button type="button" id="" onclick="userTime.addMinutes(+prompt('Add minutes: '))">+ минуты</button>
+            <button type="button" id="" onclick="userTime.addHours(+prompt('Add hours: '))">+ часы</button>
+            <button type="button" id="runbutton" onclick="run()">запустить</button>
+        </div>
+        <div class="home"><a href="../lesson10.html">назад</a></div>
+    </main>
+    <script src="../js/lesson.js"></script>
+</body>
+</html>

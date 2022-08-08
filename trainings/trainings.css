@@ -1,0 +1,146 @@
+/* start full reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* end full reset*/
+body{
+  background-color: grey;
+}
+.container{
+  width: 700px;
+  margin: 0 auto;
+}
+main{
+  padding: .5em;
+  border: 1px solid lightgrey;
+}
+.exercises{
+  padding: 10px;
+}
+.exercises input{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: grey;
+  border: none;
+}
+.exercise input[type=text]{
+  width: 80%;
+  border:none;
+  outline: transparent;
+}
+.exercise input[type=text]:focus{
+  outline: 1px solid black;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  outline: transparent;
+}
+.exercise input[type=number]{
+  padding: 0.1em;
+  width: 50%;
+  text-align: center;
+  font-size: 1em;
+}
+input[type=range]{
+  width: 100%;
+}
+[name="exercise_name"]:hover{
+  cursor:pointer;
+}
+.exercise_data, 
+.exercise_numbers,
+.exercise .name,
+.exercise_push,
+.exercise_numbers > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exercise_numbers > div{
+  flex-direction: column;
+  width: 33.33%;
+}
+.exercise_data > div{
+  width: 33.33%;
+}
+.exercise_numbers input{
+  margin: .5em 0;
+}
+/* .container {
+}
+.exercises {
+  
+}
+.buttons {
+}
+.exercise {
+}
+.exercise_data {
+}
+.name {
+}
+.exercise_numbers {
+}
+.sets {
+}
+.more {
+}
+.less {
+}
+.exercise_sets_span {
+}
+.reps {
+}
+.exercise_push {
+} */
+.exercise_push button{
+  padding: 2em;
+  border-radius: 30%;
+  border: none;
+  box-shadow: 1px 1px 5px 0 black;
+}
+.exercise_push button:hover{
+  background-color: lightgrey;
+}
+.exercise_push button:active{
+  padding: 2em;
+  box-shadow: 1px 1px 3px 0 black;
+}
+/* .exercise_progress {
+} */

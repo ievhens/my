@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <main>
+        <div class="home"><a href="../lesson11.html">назад</a></div>
+        <section class="task-description">
+            <div class="task-description-text">
+                <p>Реализовать класс, описывающий блок html документ.<br>
+                    Класс HtmlBlock должен содержать внутри себя:</p>
+                    <ul>
+                        <li>коллекцию стилей, описанных с помощью класса CssClass;</li>
+                        <li>корневой элемент, описанный с помощью класса HtmlElement;</li>
+                        <li>метод getCode(), который возвращает строку с html кодом (сначала теги style с описанием всех классов, а потом
+                            все html содержимое из корневого тега и его вложенных
+                            элементов).</li>
+                    </ul>
+                <p>С помощью написанных классов реализовать следующий блок
+                    (см. рис. 2) и добавить его на страницу с помощью document.write().</p>
+            </div>
+            <img src="../img/Screenshot_13.jpg" alt="block to realize as object">
+            </section>
+        <div class = buttons>
+            <button type="button" id="" onclick="doc.getCode()">Вывести</button>
+        </div>
+        <div id="result"></div> 
+    </main>
+    <script src="../js/lesson.js"></script>
+</body>
+</html>
+

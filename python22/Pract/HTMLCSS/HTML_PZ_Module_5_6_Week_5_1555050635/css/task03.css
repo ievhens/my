@@ -1,0 +1,153 @@
+/* start full reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end full reset*/
+.wraper{
+    width: 900px;
+    margin: auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+header{
+    position: sticky;
+    top: 0;
+    height: 70px;
+    background-color: rgb(162, 54, 69);
+}
+header li{
+    display: inline-block;
+    height: 100%;
+    padding: 25px 10px;
+    width: 85px;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+header a:first-child li{
+    width: 150px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+header li:hover{
+    background-color: rgb(145 47 60);
+}
+main{
+    background-color: rgb(245 245 245);
+    padding: 20px 50px;
+}
+article{
+    width: 68%;
+    float: left;
+}
+h1{
+    font-size: 2em;
+    font-weight: 700;
+}
+hr{
+    margin: 20px 0;
+}
+cite{
+    font-size: 0.9em;
+    font-style: italic;
+}
+p{
+    margin: 20px 0;
+    text-align: justify;
+}
+.infobox{
+    width: 25%;
+    float: right;
+    padding: 20px;
+    font-size: 0.8em;
+    background-color: rgb(231 231 231);
+}
+.infobox img{
+    width: 100%;
+}
+td{
+    padding: 4px;
+}
+td:first-child{
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.similar-authors{
+    clear: both;
+}
+.similar-authors a{
+    color: black;
+}
+h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.authors-slider{
+    height: 225px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 5px;
+    overflow: auto;
+}
+.authors-slider-item{
+    width: 121px;
+    height: 95%;
+    float: left;
+    margin: 5px;
+}
+.authors-slider-item:hover{
+    text-decoration: underline;
+}
+.slider-image{
+    position: relative;
+    height: 145px;
+    overflow: hidden;
+}
+.slider-image img{
+    position: absolute;
+    max-width: 100%;
+}
+.authors-slider-item:nth-child(3) img{
+    top: -30px;
+}
+.authors-slider-item:nth-child(4) img{
+    top: -5px;
+}
+.slider-name{
+    text-align: center;
+    padding: 15px 0;
+}

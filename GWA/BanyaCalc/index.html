@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BanyaCalc</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>З легким паром, з молодим запалом!</h1>
+        </div>
+    </header>
+    <main class="container">
+        <form action="">
+            <div class="numbervalues">
+                <fieldset class="persons">
+                    <legend>Кількість гостей</legend>
+                    <div class="container">
+                        <button type="button" onclick="changeQuantity(-1)">&#8722;</button>
+                        <input type="number" name="persons" value="4" id="persons" min="1" max="20"> 
+                        <button type="button" onclick="changeQuantity(1)">&#43;</button>
+                    </div>
+                    <input class="range" type="range" min="1" max="20" step="1" value="4">
+                </fieldset>
+                <fieldset class="hours">
+                    <legend>Кількість годин</legend>
+                    <div class="container">
+                        <button type="button" onclick="changeQuantity(-1)">&#8722;</button>
+                        <input type="number" name="hours" value="4" id="hours" min="1" max="8"> 
+                        <button type="button" onclick="changeQuantity(1)">&#43;</button>
+                    </div>
+                    <input class="range" type="range" min="1" max="8" step="1" value="4">
+                </fieldset>
+            </div>
+            <fieldset class="rooms">
+                <legend>Номер</legend>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="room" value="comfort" checked></td>
+                        <td><input type="radio" name="room" value="luxury"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="room1">Комфорт</label></td>
+                        <td><label for="room3">Люкс</label></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset class="days">
+                <legend>День</legend>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="day" value="weekday"></td>
+                        <td><input type="radio" name="day" value="weekend" checked></td>
+                    </tr>
+                    <tr>
+                        <td><label for="weekday">Будень (Пн - Чт)</label></td>
+                        <td><label for="weekend">Вікенд (Пт - Сб)</label></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <aside class="result">
+                <div class="text">
+                    <p>Разом: </p>
+                    <p>З кожного: </p>
+                </div>
+                <div class="numbers">
+                    <p id="total"></p>
+                    <p id="properson"></p>
+                </div>
+            </aside>            
+            <input type="submit" id="submit" value="Порахувати">
+        </form>
+    </main>
+    <footer>
+        <div class="container"></div>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+</html>
