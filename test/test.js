@@ -166,7 +166,9 @@ function load() {
         document.getElementById("result").appendChild(aside);
         assign(blocks[i].name);
     }
-} 
+}
+
+// comment
 
 function assign(name){
     document.querySelector(`.${name}`).addEventListener("click", event => {
