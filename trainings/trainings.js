@@ -88,6 +88,9 @@ class Exercises{
     toString(){
         return Object.values(this).join("");
     }
+    display(){
+        return Object.values(this).filter(value => !value.complete).join("");
+    }
     total(){
         let totalSets = 0;
         let totalDones = 0;
@@ -114,7 +117,6 @@ class Exercises{
 }
 
 let parent = new Exercises;
-let display = new Exercises;
 let edited;
 
 
@@ -122,18 +124,15 @@ document.onload = load()
 
 function load(){
 
-    if(getfromCookie()){
+    if(getFromCookie()){
 
-        Object.values(getfromCookie()).forEach(obj =>{
+        Object.values(getFromCookie()).forEach(obj =>{
             let exercise = Object.assign(new Exercise(), obj);
             parent[exercise.name] = exercise;
-            if(!exercise.complete){
-                display[exercise.name] = exercise;
-            }
         })
     }
 
-    document.querySelector(".exercises").innerHTML = display;
+    document.querySelector(".exercises").innerHTML = parent.display();
     document.querySelector(".total_progress").innerHTML = parent.progress();
 
     
@@ -183,6 +182,7 @@ function load(){
             if(item.value != edited){
                 parent[item.value] = (new Exercise(name, sets, reps, dones))
                 delete parent[edited]
+                delete display[edited]
             }
             saveToCookie()
             load()})
@@ -192,15 +192,11 @@ function load(){
 
 function addExercise(){
     parent[new Exercise().name] = new Exercise;
-    display[new Exercise().name] = new Exercise;
-    console.log(parent);
-    
     load();
     let input = document.querySelector(`[name="exercise_name"][value=""]`);
     input.focus();
     input.setSelectionRange(input.value.length, input.value.length);
 }
-
 
 
 
@@ -213,7 +209,7 @@ function saveToCookie(){
     document.cookie = `trainings=${JSON.stringify(parent)}; expires=${expires.toGMTString()}; path=/`;
 }
 
-function getfromCookie(){
+function getFromCookie(){
 
     let cookieString = decodeURIComponent(document.cookie);
     if(cookieString.length > 0){
@@ -231,4 +227,4 @@ function clearCookie(name){
 
 // saveToCookie()
 //clearCookie("trainings")
-console.log(getfromCookie());
+console.log(getFromCookie());
