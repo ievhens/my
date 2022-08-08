@@ -168,7 +168,7 @@ function load() {
     }
 }
 
-// comment
+
 
 function assign(name){
     document.querySelector(`.${name}`).addEventListener("click", event => {
