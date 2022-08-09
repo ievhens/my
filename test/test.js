@@ -9,25 +9,19 @@ let interval = setInterval(() => {
 }, 1000)
 
 let promise = new Promise(function(resolve, reject) {
-    if(counter == 3){
-        resolve("a")
-    }
-        reject(counter)
+    setTimeout(() => {
+        if(counter == 3){
+            resolve("resolved")
+        }
+        else{
+            reject("rejected");
+        }
+    }, 2000)
 })
+promise.then(console.log)
+promise.catch(console.log)
 
-promise.catch(catcher)
 
-
-function catcher(counter){
-    if(counter != 5){
-        promise = new Promise(function(resolve, reject) {
-            if(counter == 3){
-                resolve("a")
-            }
-            reject(counter)
-        })
-    }
-}
 
 
 
