@@ -1,15 +1,11 @@
-// function display(result){
-//   document.getElementById("result").innerHTML = result;
-// }
-
 class Exercise{
 
     constructor(name, sets, reps, dones){
         this.name = name || "",
-        this.sets = sets || 1,
-        this.reps = reps || 3,
-        this.dones = dones || 0,
-        this.complete = (this.sets == this.dones)
+            this.sets = sets || 1,
+            this.reps = reps || 3,
+            this.dones = dones || 0,
+            this.complete = (this.sets === this.dones)
     }
 
     toString(){
@@ -48,12 +44,12 @@ class Exercise{
     apply(){
 
         let element = document.querySelector(`[value="${this.name}"]`).closest(".exercise");
-        
-        element.querySelector("input[name='exercise_name']").value = this.name;
-        element.querySelector("input[name='sets']").value = this.sets - this.dones;
-        element.querySelector("input[name='reps']").value = this.reps;
-        element.querySelector("input[name='exercise_progress']").max = this.sets;
-        element.querySelector("input[name='exercise_progress']").value = this.dones;
+
+        element.querySelector("[name='exercise_name']").value = this.name;
+        element.querySelector("[name='sets']").value = this.sets - this.dones;
+        element.querySelector("[name='reps']").value = this.reps;
+        element.querySelector("[name='exercise_progress']").max = this.sets;
+        element.querySelector("[name='exercise_progress']").value = this.dones;
 
     }
 
@@ -61,11 +57,11 @@ class Exercise{
         if((this.sets - this.dones) > 0){
             this.dones ++
         }
-        if(this.sets == this.dones){
+        if(this.sets === this.dones){
             this.complete = true;
             document.querySelector(`[value="${this.name}"]`).closest(".exercise").style.display = "none";
         }
-        this.apply();            
+        this.apply();
     }
     addrep(n){
         if((this.reps + n) >= 1){
@@ -75,21 +71,25 @@ class Exercise{
 
     }
     addset(n){
-        if(this.sets == this.dones){
+        if(this.sets === this.dones){
             this.sets = this.dones = 0}
         if((this.sets + n) > 0){
             this.sets += n;
-        this.apply();
+            this.apply();
         }
     }
 }
 
-class Exercises{
+class Day {
     toString(){
-        return Object.values(this).join("");
-    }
-    display(){
         return Object.values(this).filter(value => !value.complete).join("");
+    }
+    repeat(){
+        let values = Object.values(this);
+        for(let i in values){
+            values[i].dones = 0;
+            values[i].complete = false;
+        }
     }
     total(){
         let totalSets = 0;
@@ -98,9 +98,8 @@ class Exercises{
         for(let el in this){
             totalSets += this[el].sets;
             totalDones += this[el].dones;
-            
         }
-        
+
         return {
             sets: totalSets,
             dones: totalDones,
@@ -116,7 +115,7 @@ class Exercises{
     }
 }
 
-let parent = new Exercises;
+let day = new Day;
 let edited;
 
 
@@ -125,17 +124,16 @@ document.onload = load()
 function load(){
 
     if(getFromCookie()){
-
         Object.values(getFromCookie()).forEach(obj =>{
             let exercise = Object.assign(new Exercise(), obj);
-            parent[exercise.name] = exercise;
+            day[exercise.name] = exercise;
         })
     }
 
-    document.querySelector(".exercises").innerHTML = parent.display();
-    document.querySelector(".total_progress").innerHTML = parent.progress();
+    document.querySelector(".exercises").innerHTML = day;
+    document.querySelector(".total_progress").innerHTML = day.progress();
 
-    
+
     document.querySelectorAll("input[type='range']").forEach(item =>{
         item.disabled = true;
     })
@@ -143,8 +141,8 @@ function load(){
     document.querySelectorAll(".exercise_push button").forEach(item =>{
         item.addEventListener("click", () =>{
             let name = item.closest(".exercise").querySelector("[name='exercise_name']").value;
-            parent[name].addone();
-            parent.apply();
+            day[name].addone();
+            day.apply();
             saveToCookie()
         })
     })
@@ -154,12 +152,12 @@ function load(){
             let name = item.closest(".exercise").querySelector("[name='exercise_name']").value;
             let n = event.target.classList.contains("more") ? 1 : -1;
             if(event.target.parentNode.classList.contains("sets")){
-                parent[name].addset(n);
+                day[name].addset(n);
             }
             if(event.target.parentNode.classList.contains("reps")){
-                parent[name].addrep(n);
+                day[name].addrep(n);
             }
-            parent.apply();
+            day.apply();
             saveToCookie()
         })
     })
@@ -167,46 +165,49 @@ function load(){
     document.querySelectorAll("[name='exercise_name']").forEach(item =>{
         item.addEventListener("focusin", event =>{
             edited = event.target.value;
-    })
+        })
 
-    document.querySelectorAll("[name='exercise_name']").forEach(item =>{
-        item.addEventListener("focusout", event =>{
+        document.querySelectorAll("[name='exercise_name']").forEach(item =>{
+            item.addEventListener("focusout", event =>{
 
-            let element = item.closest(".exercise");
-        
-            let name = item.value;
-            let sets = +element.querySelector("[name='sets']").value;
-            let reps = +element.querySelector("[name='reps']").value;
-            let dones = +element.querySelector("[name='exercise_progress']").value
+                let element = item.closest(".exercise");
 
-            if(item.value != edited){
-                parent[item.value] = (new Exercise(name, sets, reps, dones))
-                delete parent[edited]
-                delete display[edited]
-            }
-            saveToCookie()
-            load()})
+                let name = item.value;
+                let sets = +element.querySelector("[name='sets']").value;
+                let reps = +element.querySelector("[name='reps']").value;
+                let dones = +element.querySelector("[name='exercise_progress']").value
+
+                if(item.value !== edited){
+                    day[item.value] = (new Exercise(name, sets, reps, dones))
+                    delete day[edited]
+                }
+                saveToCookie();
+                load();
+            })
         })
     })
 }
 
 function addExercise(){
-    parent[new Exercise().name] = new Exercise;
+    day[new Exercise().name] = new Exercise;
     load();
     let input = document.querySelector(`[name="exercise_name"][value=""]`);
     input.focus();
     input.setSelectionRange(input.value.length, input.value.length);
 }
 
-
-
-
+function repeat(){
+    day.repeat();
+    saveToCookie();
+    load();
+    console.log(day);
+}
 
 function saveToCookie(){
     let cookieDuration = 60*60*1000;
     let now = +(new Date());
     let expires = new Date(now + cookieDuration);
-    document.cookie = `trainings=${JSON.stringify(parent)}; expires=${expires.toGMTString()}; path=/`;
+    document.cookie = `trainings=${JSON.stringify(day)}; expires=${expires.toGMTString()}; path=/`;
 }
 
 function getFromCookie(){
@@ -221,10 +222,11 @@ function clearCookie(name){
     let cookieDuration = 24*60*60*1000;
     let now = +(new Date());
     let expires = new Date(now - cookieDuration);
-    document.cookie = `${name}=${JSON.stringify(parent)}; expires=${expires.toGMTString()}; path=/`;
+    document.cookie = `${name}=${JSON.stringify(day)}; expires=${expires.toGMTString()}; path=/`;
     console.log(document.cookie);
 }
 
 // saveToCookie()
 //clearCookie("trainings")
 console.log(getFromCookie());
+console.log(day);

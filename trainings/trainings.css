@@ -12,34 +12,34 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 ol, ul {
-list-style: none;
+  list-style: none;
 }
 blockquote, q {
-quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-content: '';
-content: none;
+  content: '';
+  content: none;
 }
 table {
-border-collapse: collapse;
-border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* end full reset*/
 body{
   background-color: grey;
 }
 .container{
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
 }
 main{
@@ -51,6 +51,7 @@ main{
 }
 .exercises input{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: .8em;
   background-color: grey;
   border: none;
 }
@@ -83,7 +84,7 @@ input[type=range]{
 [name="exercise_name"]:hover{
   cursor:pointer;
 }
-.exercise_data, 
+.exercise_data,
 .exercise_numbers,
 .exercise .name,
 .exercise_push,
@@ -102,15 +103,34 @@ input[type=range]{
 .exercise_numbers input{
   margin: .5em 0;
 }
+.exercise_numbers button{
+  background: none;
+  border: none;
+  color: rgb(70, 70, 70);
+}
+.total_progress{
+  position: sticky;
+  top: 0;
+  border: 1px solid darkblue;
+  padding: 1em;
+  box-shadow: 2px 2px 5px 0 darkblue;
+  background-color: grey;
+}
+.exercise{
+  margin: .5em;
+  padding: .1em;
+  box-shadow: 0 0 2px 1px rgb(148, 148, 148);
+}
+
+
 /* .container {
 }
 .exercises {
-  
+
 }
 .buttons {
 }
-.exercise {
-}
+
 .exercise_data {
 }
 .name {
@@ -142,5 +162,6 @@ input[type=range]{
   padding: 2em;
   box-shadow: 1px 1px 3px 0 black;
 }
-/* .exercise_progress {
-} */
+.exercise_progress{
+  padding: 0 1em;
+}
