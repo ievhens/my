@@ -8,10 +8,10 @@ class Exercise{
 
     constructor(name, sets, reps, dones){
         this.name = name || "",
-        this.sets = sets || 1,
-        this.reps = reps || 3,
-        this.dones = dones || 0,
-        this.complete = (this.sets == this.dones)
+            this.sets = sets || 1,
+            this.reps = reps || 3,
+            this.dones = dones || 0,
+            this.complete = (this.sets == this.dones)
     }
 
     toString(){
@@ -50,7 +50,7 @@ class Exercise{
     apply(){
 
         let element = document.querySelector(`[value="${this.name}"]`).closest(".exercise");
-        
+
         element.querySelector("input[name='exercise_name']").value = this.name;
         element.querySelector("input[name='sets']").value = this.sets - this.dones;
         element.querySelector("input[name='reps']").value = this.reps;
@@ -67,7 +67,7 @@ class Exercise{
             this.complete = true;
             document.querySelector(`[value="${this.name}"]`).closest(".exercise").style.display = "none";
         }
-        this.apply();            
+        this.apply();
     }
     addrep(n){
         if((this.reps + n) >= 1){
@@ -81,7 +81,7 @@ class Exercise{
             this.sets = this.dones = 0}
         if((this.sets + n) > 0){
             this.sets += n;
-        this.apply();
+            this.apply();
         }
     }
 }
@@ -97,7 +97,7 @@ class Exercises{
         for(let el in this){
             totalSets += this[el].sets;
             totalDones += this[el].dones;
-            
+
         }
         return {
             sets: totalSets,
@@ -122,8 +122,8 @@ for(let i = 1; i < 6; i++){
 class Block{
     constructor(name, a, b){
         this.name = name || "test",
-        this.a = a || 1,
-        this.b = b || 1
+            this.a = a || 1,
+            this.b = b || 1
     }
     toString(){
         let layout = `
@@ -139,7 +139,7 @@ class Block{
     }
 }
 class Parent{
-    constructor(){        
+    constructor(){
     }
     toString(){
         return Object.values(this).join("");
@@ -168,7 +168,7 @@ function load() {
     }
 }
 
-
+// comment
 
 function assign(name){
     document.querySelector(`.${name}`).addEventListener("click", event => {
@@ -199,20 +199,3 @@ function assign(name){
 
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
