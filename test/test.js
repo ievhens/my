@@ -8,18 +8,19 @@ let interval = setInterval(() => {
     if(counter === 5) clearInterval(interval)
 }, 1000)
 
-let promise = new Promise(function(resolve, reject) {
-    setTimeout(() => {
-        if(counter == 3){
-            resolve("resolved")
-        }
-        else{
-            reject("rejected");
-        }
-    }, 2000)
+let layout = new Promise(function(resolve, reject) {
+    let div = document.createElement("div");
+    div.classList.add("test");
+    document.getElementById("result").appendChild(div)
+    console.log(document.getElementById("result").innerHTML)
 })
-promise.then(console.log)
-promise.catch(console.log)
+layout.then(
+        setTimeout(() => {
+            document.querySelector(".test").innerHTML = "TEST";
+            console.log(document.querySelector(".test"));
+        }, 3000)
+    )
+
 
 
 
